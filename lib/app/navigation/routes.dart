@@ -1,0 +1,9 @@
+const String MainRoute = '/';
+const String SplashRoute = 'Splash';
+const String DashboardRoute = 'Dashboard';
+const String MessageRoute = 'Message';
+const String NewBoardRoute = 'NewBoard';
+const String ViewBoardRoute = 'ViewBoard';
+const String ViewEditCardRoute = 'ViewEditCard';
+const String AddNewCardRoute = 'AddNewCard';
+const String NotificationsRoute = 'Notification';

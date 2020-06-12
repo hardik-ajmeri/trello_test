@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="" />
+    <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/app/common_bloc_delegate.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/main_app.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/navigation/router.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/navigation/routes.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Galaxy_Note10_API_R" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+        <option value="stateless_widget" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1dBePL5PNAshIUZabO4iNxjtihK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -35,25 +71,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1866" height="296" key="GridCell.Tab.0.bottom" timestamp="1591906335071">
+    <state x="516" y="119" key="CommitChangelistDialog2" timestamp="1591934960874">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1591906335071" />
-    <state width="1866" height="296" key="GridCell.Tab.0.center" timestamp="1591906335070">
+    <state x="516" y="119" key="CommitChangelistDialog2/0.23.1920.1119@0.23.1920.1119" timestamp="1591934960874" />
+    <state width="1866" height="296" key="GridCell.Tab.0.bottom" timestamp="1591906584686">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1591906335070" />
-    <state width="1866" height="296" key="GridCell.Tab.0.left" timestamp="1591906335070">
+    <state width="1866" height="296" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584686" />
+    <state width="1866" height="296" key="GridCell.Tab.0.center" timestamp="1591906584685">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1591906335070" />
-    <state width="1866" height="296" key="GridCell.Tab.0.right" timestamp="1591906335070">
+    <state width="1866" height="296" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584685" />
+    <state width="1866" height="296" key="GridCell.Tab.0.left" timestamp="1591906584685">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1591906335070" />
+    <state width="1866" height="296" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584685" />
+    <state width="1866" height="296" key="GridCell.Tab.0.right" timestamp="1591906584685">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state width="1866" height="296" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584685" />
     <state x="581" y="288" width="757" height="588" key="find.popup" timestamp="1591903129956">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="581" y="288" width="757" height="588" key="find.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1591903129956" />
+    <state x="541" y="267" key="run.anything.popup" timestamp="1591934253247">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="541" y="267" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1591934253247" />
   </component>
 </project>
