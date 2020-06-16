@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="Added">
-      <change afterPath="$PROJECT_DIR$/assets/images/svgs/bg1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/svgs/user_task.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/helpers/draggable_helper/drag_and_drop_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/helpers/draggable_helper/my_draggable.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/helpers/fs_constants.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/helpers/validators.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/model/board_category.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/model/board_category.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/model/board_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/model/board_list.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/model/hl_board.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/model/hl_board.g.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/home/home_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/home/tab_container.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_bloc.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_event.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_form.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/main_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/main_app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/navigation/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/navigation/router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/navigation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/navigation/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trellotest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/trellotest.iml" afterDir="false" />
-    </list>
+    <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="Added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
