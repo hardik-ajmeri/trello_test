@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/app/common_bloc_delegate.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/main_app.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/navigation/router.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/navigation/routes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" afterDir="false" />
+    <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="Added">
+      <change afterPath="$PROJECT_DIR$/assets/images/svgs/bg1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/svgs/user_task.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/helpers/draggable_helper/drag_and_drop_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/helpers/draggable_helper/my_draggable.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/helpers/fs_constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/helpers/validators.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/board_category.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/board_category.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/board_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/board_list.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/hl_board.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/hl_board.g.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/home/home_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/home/tab_container.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_event.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_form.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/main_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/main_app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/navigation/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/navigation/router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/navigation/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/navigation/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trellotest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/trellotest.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +54,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dart File" />
+        <option value="event" />
+        <option value="state" />
+        <option value="bloc" />
+        <option value="Specification" />
+        <option value="stateful_widget" />
         <option value="stateless_widget" />
+        <option value="Dart File" />
       </list>
     </option>
   </component>
@@ -51,6 +84,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -70,34 +104,49 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592039798617">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1592039798617" />
+    <state x="808" y="342" key="AndroidProcessChooserDialog" timestamp="1591960690054">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="808" y="342" key="AndroidProcessChooserDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1591960690054" />
     <state x="516" y="119" key="CommitChangelistDialog2" timestamp="1591934960874">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="516" y="119" key="CommitChangelistDialog2/0.23.1920.1119@0.23.1920.1119" timestamp="1591934960874" />
-    <state width="1866" height="296" key="GridCell.Tab.0.bottom" timestamp="1591906584686">
+    <state width="1866" height="298" key="GridCell.Tab.0.bottom" timestamp="1592315364619">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584686" />
-    <state width="1866" height="296" key="GridCell.Tab.0.center" timestamp="1591906584685">
+    <state width="1866" height="298" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1592315364619" />
+    <state width="1866" height="298" key="GridCell.Tab.0.center" timestamp="1592315364619">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584685" />
-    <state width="1866" height="296" key="GridCell.Tab.0.left" timestamp="1591906584685">
+    <state width="1866" height="298" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1592315364619" />
+    <state width="1866" height="298" key="GridCell.Tab.0.left" timestamp="1592315364618">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584685" />
-    <state width="1866" height="296" key="GridCell.Tab.0.right" timestamp="1591906584685">
+    <state width="1866" height="298" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1592315364618" />
+    <state width="1866" height="298" key="GridCell.Tab.0.right" timestamp="1592315364619">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="296" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1591906584685" />
+    <state width="1866" height="298" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1592315364619" />
     <state x="581" y="288" width="757" height="588" key="find.popup" timestamp="1591903129956">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="581" y="288" width="757" height="588" key="find.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1591903129956" />
-    <state x="541" y="267" key="run.anything.popup" timestamp="1591934253247">
+    <state x="541" y="267" key="run.anything.popup" timestamp="1592315922243">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="541" y="267" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1591934253247" />
+    <state x="541" y="267" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592315922243" />
+    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup" timestamp="1592311698183">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592311698183" />
   </component>
 </project>

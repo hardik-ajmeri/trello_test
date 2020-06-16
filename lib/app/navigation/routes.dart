@@ -1,5 +1,6 @@
 const String MainRoute = '/';
 const String SplashRoute = 'Splash';
+const String HomeRoute = 'Home';
 const String DashboardRoute = 'Dashboard';
 const String MessageRoute = 'Message';
 const String NewBoardRoute = 'NewBoard';
