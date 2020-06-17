@@ -40,7 +40,7 @@ class FSHelper {
 
   Stream<QuerySnapshot> getPersonalBoards() {
     try {
-      return _firestore.collection(FSConstants.FS_Boards).where('category', isEqualTo: 'Personal').snapshots();
+      return _firestore.collection(FSConstants.FS_Boards).where('category', isEqualTo: "Personal").snapshots();
     } catch (error) {
       print(error.toString());
       return null;
@@ -49,7 +49,7 @@ class FSHelper {
 
   Stream<QuerySnapshot> getWorkBoards() {
     try {
-      return  _firestore.collection(FSConstants.FS_Boards).where('category', isEqualTo: 'Work').snapshots();
+      return  _firestore.collection(FSConstants.FS_Boards).where("category", isEqualTo: "Work").snapshots();
     } catch (error) {
       print(error.toString());
       return null;

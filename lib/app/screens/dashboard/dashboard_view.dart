@@ -96,7 +96,7 @@ class _DashboardViewState extends State<DashboardView> {
                             )),
                         //SizedBox(height: 40),
                         StreamBuilder(
-                          stream: _bloc.getWoklBoards(),
+                          stream: _bloc.getPersonalBoards(),
                           builder: (BuildContext context,
                               AsyncSnapshot<QuerySnapshot> snapshot) {
                             personalBoards.clear();
@@ -139,6 +139,8 @@ class _DashboardViewState extends State<DashboardView> {
                               AsyncSnapshot<QuerySnapshot> snapshot) {
                             workBoards.clear();
                             if (snapshot.data != null) {
+//                            .where((element) => element.data.containsValue("Personal"))
+//                                .where((element) => element.data.containsValue("Work"))
                               snapshot.data.documents.forEach((element) {
                                 if (element.data != null) {
                                   workBoards.add(HLBoard.fromJson(
