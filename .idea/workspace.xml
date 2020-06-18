@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="Added">
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/childs/board_list_header_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/main_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/main_app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +24,8 @@
         <option value="bloc" />
         <option value="Specification" />
         <option value="stateful_widget" />
-        <option value="stateless_widget" />
         <option value="Dart File" />
+        <option value="stateless_widget" />
       </list>
     </option>
   </component>
@@ -82,33 +85,33 @@
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="516" y="119" key="CommitChangelistDialog2/0.23.1920.1119@0.23.1920.1119" timestamp="1591934960874" />
-    <state width="1866" height="298" key="GridCell.Tab.0.bottom" timestamp="1592369345994">
+    <state width="1866" height="298" key="GridCell.Tab.0.bottom" timestamp="1592452413237">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1592369345994" />
-    <state width="1866" height="298" key="GridCell.Tab.0.center" timestamp="1592369345993">
+    <state width="1866" height="298" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413237" />
+    <state width="1866" height="298" key="GridCell.Tab.0.center" timestamp="1592452413237">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1592369345993" />
-    <state width="1866" height="298" key="GridCell.Tab.0.left" timestamp="1592369345993">
+    <state width="1866" height="298" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413237" />
+    <state width="1866" height="298" key="GridCell.Tab.0.left" timestamp="1592452413236">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1592369345993" />
-    <state width="1866" height="298" key="GridCell.Tab.0.right" timestamp="1592369345994">
+    <state width="1866" height="298" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413236" />
+    <state width="1866" height="298" key="GridCell.Tab.0.right" timestamp="1592452413237">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1592369345994" />
+    <state width="1866" height="298" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413237" />
     <state x="581" y="288" width="757" height="588" key="find.popup" timestamp="1591903129956">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="581" y="288" width="757" height="588" key="find.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1591903129956" />
-    <state x="541" y="267" key="run.anything.popup" timestamp="1592368530503">
+    <state x="541" y="267" key="run.anything.popup" timestamp="1592374212821">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="541" y="267" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592368530503" />
-    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup" timestamp="1592311698183">
+    <state x="541" y="267" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592374212821" />
+    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup" timestamp="1592373283571">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592311698183" />
+    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592373283571" />
   </component>
 </project>

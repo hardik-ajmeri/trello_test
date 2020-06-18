@@ -104,8 +104,8 @@ class UserView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
+          color: Colors.black.withAlpha(25),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
             padding: EdgeInsets.all(0),
@@ -113,6 +113,7 @@ class UserView extends StatelessWidget {
               cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
                   border: InputBorder.none,
+                  enabledBorder: InputBorder.none,
                   hintText: 'Search card, board or task here',
                   prefixIcon: Icon(
                     Icons.search,
