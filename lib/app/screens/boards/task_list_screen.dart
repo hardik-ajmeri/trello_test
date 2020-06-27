@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/screens/boards/task_list_view.dart';
 
 class TaskListScreen extends StatelessWidget {
-  final String _title;
+  final HLBoard _board;
 
-  TaskListScreen({Key key, @required String title }) : assert(title != null),
-        _title = title,
+  TaskListScreen({Key key, @required HLBoard board})
+      : assert(board != null),
+        _board = board,
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TaskListView(title: _title),
+      body: TaskListView(board: _board),
     );
   }
 }

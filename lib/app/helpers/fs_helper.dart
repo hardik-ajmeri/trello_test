@@ -38,6 +38,15 @@ class FSHelper {
     }
   }
 
+  Stream<QuerySnapshot> getLables() {
+    try {
+      return _firestore.collection(FSConstants.FS_Lables).snapshots();
+    } catch (error) {
+      print(error.toString());
+      return null;
+    }
+  }
+
   Stream<QuerySnapshot> getPersonalBoards() {
     try {
       return _firestore.collection(FSConstants.FS_Boards).where('category', isEqualTo: "Personal").snapshots();

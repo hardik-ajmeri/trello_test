@@ -4,6 +4,7 @@ import 'package:meta/meta.dart';
 class NewBoardState {
   final bool isValidName;
   final bool isValidType;
+  final bool isValidLable;
   final bool isDescriptionValid;
   final bool isValidVisitedTime;
   final bool isValidCreatedTime;
@@ -11,11 +12,12 @@ class NewBoardState {
   final bool isSuccess;
   final bool isFailure;
 
-  bool get isFormValid => isValidName && isValidType && isDescriptionValid;
+  bool get isFormValid => isValidName && isValidType && isValidLable && isDescriptionValid;
 
   NewBoardState(
       {@required this.isValidName,
       @required this.isValidType,
+      @required this.isValidLable,
       @required this.isValidCreatedTime,
       @required this.isValidVisitedTime,
       @required this.isDescriptionValid,
@@ -27,6 +29,7 @@ class NewBoardState {
     return NewBoardState(
         isValidName: true,
         isValidType: true,
+        isValidLable: true,
         isDescriptionValid: true,
         isValidCreatedTime: true,
         isValidVisitedTime: true,
@@ -39,6 +42,7 @@ class NewBoardState {
     return NewBoardState(
         isValidName: true,
         isValidType: true,
+        isValidLable: true,
         isDescriptionValid: true,
         isValidCreatedTime: true,
         isValidVisitedTime: true,
@@ -51,6 +55,7 @@ class NewBoardState {
     return NewBoardState(
         isValidName: true,
         isValidType: true,
+        isValidLable: true,
         isDescriptionValid: true,
         isValidCreatedTime: true,
         isValidVisitedTime: true,
@@ -63,6 +68,7 @@ class NewBoardState {
     return NewBoardState(
         isValidName: true,
         isValidType: true,
+        isValidLable: true,
         isDescriptionValid: true,
         isValidCreatedTime: true,
         isValidVisitedTime: true,
@@ -74,6 +80,7 @@ class NewBoardState {
   NewBoardState update({
     bool isValidName,
     bool isValidType,
+    bool isValidLable,
     bool isDescriptionValid,
     bool isValidVisitedTime,
     bool isValidCreatedTime,
@@ -81,6 +88,7 @@ class NewBoardState {
     return copyWith(
         isValidName: isValidName,
         isValidType: isValidType,
+        isValidLable: isValidLable,
         isDescriptionValid: isDescriptionValid,
         isValidCreatedTime: isValidCreatedTime,
         isValidVisitedTime: isValidVisitedTime,
@@ -92,6 +100,7 @@ class NewBoardState {
   NewBoardState copyWith(
       {bool isValidName,
       bool isValidType,
+      bool isValidLable,
       bool isDescriptionValid,
       bool isValidVisitedTime,
       bool isValidCreatedTime,
@@ -102,6 +111,7 @@ class NewBoardState {
     return NewBoardState(
         isValidName: isValidName ?? this.isValidName,
         isValidType: isValidType ?? this.isValidType,
+        isValidLable: isValidType ?? this.isValidLable,
         isDescriptionValid: isDescriptionValid ?? this.isDescriptionValid,
         isValidCreatedTime: isValidCreatedTime ?? this.isValidCreatedTime,
         isValidVisitedTime: isValidVisitedTime ?? this.isValidVisitedTime,
@@ -115,6 +125,7 @@ class NewBoardState {
     return '''NewBoardState  {
       isValidName: $isValidName,
       isValidType: $isValidType,
+      isValidLable: $isValidLable,
       isDescriptionValid: $isDescriptionValid,
       isValidCreatedTime: $isValidCreatedTime,
       isValidVisitedTime: $isValidVisitedTime,

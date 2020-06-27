@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="Added">
-      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/childs/board_list_header_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/helpers/hex_color.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/hl_lables.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/model/hl_lables.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/main_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/main_app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/helpers/fs_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/helpers/fs_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/helpers/validators.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/helpers/validators.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/model/hl_board.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/model/hl_board.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/model/hl_board.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/model/hl_board.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/navigation/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/navigation/router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/childs/board_list_header_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/childs/board_list_header_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +42,8 @@
         <option value="bloc" />
         <option value="Specification" />
         <option value="stateful_widget" />
-        <option value="Dart File" />
         <option value="stateless_widget" />
+        <option value="Dart File" />
       </list>
     </option>
   </component>
@@ -54,7 +72,13 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="  " />
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -73,42 +97,58 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592039798617">
+    <state x="648" y="309" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1593261255602">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1592039798617" />
-    <state x="808" y="342" key="AndroidProcessChooserDialog" timestamp="1591960690054">
+    <state x="648" y="309" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1593261255602" />
+    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592478600926">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="808" y="342" key="AndroidProcessChooserDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1591960690054" />
+    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1592478600926" />
+    <state x="808" y="342" key="AndroidProcessChooserDialog" timestamp="1593244900108">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="808" y="342" key="AndroidProcessChooserDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1593244900108" />
     <state x="516" y="119" key="CommitChangelistDialog2" timestamp="1591934960874">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="516" y="119" key="CommitChangelistDialog2/0.23.1920.1119@0.23.1920.1119" timestamp="1591934960874" />
-    <state width="1866" height="298" key="GridCell.Tab.0.bottom" timestamp="1592452413237">
+    <state width="1844" height="365" key="GridCell.Tab.0.bottom" timestamp="1593261159784">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413237" />
-    <state width="1866" height="298" key="GridCell.Tab.0.center" timestamp="1592452413237">
+    <state width="1844" height="365" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1593261159784" />
+    <state width="1844" height="365" key="GridCell.Tab.0.center" timestamp="1593261159783">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413237" />
-    <state width="1866" height="298" key="GridCell.Tab.0.left" timestamp="1592452413236">
+    <state width="1844" height="365" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1593261159783" />
+    <state width="1844" height="365" key="GridCell.Tab.0.left" timestamp="1593261159783">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413236" />
-    <state width="1866" height="298" key="GridCell.Tab.0.right" timestamp="1592452413237">
+    <state width="1844" height="365" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1593261159783" />
+    <state width="1844" height="365" key="GridCell.Tab.0.right" timestamp="1593261159784">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="298" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1592452413237" />
+    <state width="1844" height="365" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1593261159784" />
+    <state x="360" y="134" key="SettingsEditor" timestamp="1593162905615">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="360" y="134" key="SettingsEditor/0.23.1920.1119@0.23.1920.1119" timestamp="1593162905615" />
+    <state width="625" height="529" key="SwitcherDM" timestamp="1593244879183">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state width="625" height="529" key="SwitcherDM/0.23.1920.1119@0.23.1920.1119" timestamp="1593244879183" />
+    <state x="100" y="123" width="1720" height="919" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1593150080803">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="100" y="123" width="1720" height="919" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1593150080803" />
     <state x="581" y="288" width="757" height="588" key="find.popup" timestamp="1591903129956">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="581" y="288" width="757" height="588" key="find.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1591903129956" />
-    <state x="541" y="267" key="run.anything.popup" timestamp="1592374212821">
+    <state x="541" y="267" width="838" height="1032" key="run.anything.popup" timestamp="1593256532827">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="541" y="267" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592374212821" />
+    <state x="541" y="267" width="838" height="1032" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1593256532827" />
     <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup" timestamp="1592373283571">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>

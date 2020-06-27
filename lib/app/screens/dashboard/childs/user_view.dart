@@ -7,7 +7,7 @@ class UserView extends StatelessWidget {
     return Container(
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
           boxShadow: [
             BoxShadow(
                 color: Colors.black12, blurRadius: 15.0, spreadRadius: 15.0)

@@ -1,3 +1,5 @@
+import 'package:string_validator/string_validator.dart' as StringValidator;
+
 class Validators {
   static final RegExp _emailRegex = RegExp(
     r'^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$',
@@ -63,5 +65,9 @@ class Validators {
 
   static isValidImagePath(String path) {
     return _urlRegex.hasMatch(path);
+  }
+
+  static isValidColorCode(String hexCode) {
+    return StringValidator.isHexColor(hexCode);
   }
 }

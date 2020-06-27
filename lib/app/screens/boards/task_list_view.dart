@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:trellotest/app/helpers/draggable_helper/drag_and_drop_list.dart';
+import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/screens/boards/childs/board_list_header_view.dart';
 
 class TaskListView extends StatefulWidget {
-  final String _title;
+  final HLBoard _board;
 
-  TaskListView({Key key, String title})
-      : assert(title != null),
-        _title = title,
+  TaskListView({Key key, HLBoard board})
+      : assert(board != null),
+        _board = board,
         super(key: key);
 
   @override
@@ -138,7 +139,7 @@ class _TaskListViewState extends State<TaskListView> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        BoardListHeaderView(title: widget._title),
+        BoardListHeaderView(board: widget._board),
         SizedBox(height: 16.0),
         Expanded(
             child: ListView.builder(
@@ -249,11 +250,12 @@ class _TaskListViewState extends State<TaskListView> {
                     style: TextStyle(
                         fontSize: 21.0,
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).primaryColor),
+                        color: Colors.black87),
                   ),
                 ),
                 _buildAddCardTaskWidget(context, index),
                 SingleChildScrollView(
+                  reverse: true,
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.4,
                     child: DragAndDropList<String>(

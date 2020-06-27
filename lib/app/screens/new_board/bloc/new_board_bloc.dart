@@ -18,11 +18,12 @@ class NewBoardBloc extends Bloc<NewBoardEvent, NewBoardState> {
     final nonDebounceStream = events.where((event) {
       return (event is! NameChanged &&
           event is! TypeChanged &&
+          event is! LableChanged &&
           event is! DescriptionChanged);
     });
 
     final debounceStream = events.where((e) {
-      return (e is NameChanged || e is TypeChanged || e is DescriptionChanged);
+      return (e is NameChanged || e is TypeChanged || e is LableChanged || e is DescriptionChanged);
     }).debounceTime(Duration(milliseconds: 300));
 
     return super.transformEvents(
@@ -35,10 +36,12 @@ class NewBoardBloc extends Bloc<NewBoardEvent, NewBoardState> {
       yield* _mapNameChangedToState(event.title);
     } else if (event is TypeChanged) {
       yield* _mapTypeChangedToState(event.type);
+    } else if (event is LableChanged) {
+      yield* _mapLabelChangedToState(event.color_code);
     } else if (event is DescriptionChanged) {
       yield* _mapDescriptionChangedToState(event.desc);
     } else if (event is Submitted) {
-      yield* _mapNewBoardAddedToState(event.title, event.type, event.desc);
+      yield* _mapNewBoardAddedToState(event.title, event.type, event.code, event.desc);
     }
   }
 
@@ -46,8 +49,16 @@ class NewBoardBloc extends Bloc<NewBoardEvent, NewBoardState> {
     return FSHelper().getCategories();
   }
 
+  Stream<QuerySnapshot> getLables() {
+    return FSHelper().getLables();
+  }
+
   Stream<NewBoardState> _mapNameChangedToState(String title) async* {
     yield state.update(isValidName: Validators.isValidFullName(title));
+  }
+
+  Stream<NewBoardState> _mapLabelChangedToState(String hexCode) async* {
+    yield state.update(isValidLable: Validators.isValidColorCode(hexCode));
   }
 
   Stream<NewBoardState> _mapTypeChangedToState(String type) async* {
@@ -59,7 +70,7 @@ class NewBoardBloc extends Bloc<NewBoardEvent, NewBoardState> {
   }
 
   Stream<NewBoardState> _mapNewBoardAddedToState(
-      String title, String type, String desc) async* {
+      String title, String type, String hexCode, String desc) async* {
     yield NewBoardState.loading();
     try {
       var currentDate = Timestamp.fromDate(DateTime.now()).toString();
@@ -67,6 +78,7 @@ class NewBoardBloc extends Bloc<NewBoardEvent, NewBoardState> {
       HLBoard board = HLBoard(
           title: title,
           category: type,
+          color_code: hexCode,
           description: desc,
           createdAt: currentDate,
           visitedAt: visitDate);

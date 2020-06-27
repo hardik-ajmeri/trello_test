@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:trellotest/app/model/hl_board.dart';
 
 class BoardListHeaderView extends StatelessWidget {
-  final String _title;
+  final HLBoard _board;
 
-  BoardListHeaderView({Key key, @required String title})
-      : assert(title != null),
-        _title = title,
+  BoardListHeaderView({Key key, @required HLBoard board})
+      : assert(board != null),
+        _board = board,
         super(key: key);
 
   @override
@@ -13,7 +14,7 @@ class BoardListHeaderView extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
         boxShadow: [
           BoxShadow(color: Colors.black12, blurRadius: 15.0, spreadRadius: 15.0)
         ],
@@ -36,7 +37,7 @@ class BoardListHeaderView extends StatelessWidget {
                       Navigator.pop(context);
                     },
                   ),
-                  Text(_title,
+                  Text(_board.category,
                       style: TextStyle(
                           fontSize: 21,
                           fontWeight: FontWeight.bold,
@@ -78,7 +79,7 @@ class BoardListHeaderView extends StatelessWidget {
           SizedBox(height: 8.0),
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Text("HL Demo 1 ",
+              child: Text(_board.title,
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left)),
           SizedBox(height: 8.0),

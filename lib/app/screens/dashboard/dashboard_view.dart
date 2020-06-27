@@ -1,9 +1,10 @@
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:trellotest/app/model/board_list.dart';
+import 'package:trellotest/app/helpers/hex_color.dart';
 import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/navigation/routes.dart';
 import 'package:trellotest/app/screens/dashboard/bloc/bloc.dart';
@@ -107,7 +108,6 @@ class _DashboardViewState extends State<DashboardView> {
                                       jsonDecode(jsonEncode(element.data))));
                                 }
                               });
-
                               if (personalBoards != null) {
                                 return BoardCard(context, personalBoards, true);
                               } else {
@@ -139,8 +139,6 @@ class _DashboardViewState extends State<DashboardView> {
                               AsyncSnapshot<QuerySnapshot> snapshot) {
                             workBoards.clear();
                             if (snapshot.data != null) {
-//                            .where((element) => element.data.containsValue("Personal"))
-//                                .where((element) => element.data.containsValue("Work"))
                               snapshot.data.documents.forEach((element) {
                                 if (element.data != null) {
                                   workBoards.add(HLBoard.fromJson(
@@ -192,19 +190,31 @@ class _DashboardViewState extends State<DashboardView> {
                     color: Colors.black.withAlpha(15)
                   )],
                   borderRadius: BorderRadius.circular(30)),
-              child: ListTile(
-                title: Text(list[index].title,
-                    style:
-                        TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
-                subtitle: Text(list[index].description,
-                    style: TextStyle(fontSize: 15)),
+              child: GestureDetector(
                 onTap: (){
-                  if (isPersonal)  {
-                    Navigator.pushNamed(context, ViewBoardRoute, arguments: 'Personal');
-                  } else {
-                    Navigator.pushNamed(context, ViewBoardRoute, arguments: 'Work');
-                  }
+                  Navigator.pushNamed(context, ViewBoardRoute, arguments: list[index]);
                 },
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      list[index].color_code != null ? Container(
+                        width: 100,
+                        height: 8,
+                        decoration: BoxDecoration(
+                          color: HexColor(list[index].color_code),
+                          shape: BoxShape.rectangle
+                        ),
+                      ) : Container(height: 0),
+                      SizedBox(height: 8),
+                      Text(list[index].title, style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
+                      SizedBox(height: 8),
+                      Text(list[index].description, style: TextStyle(fontSize: 15))
+                    ],
+                  ),
+                ),
               ),
             );
           }),

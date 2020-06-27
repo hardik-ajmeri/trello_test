@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/navigation/routes.dart';
 import 'package:trellotest/app/screens/boards/task_list_screen.dart';
 import 'package:trellotest/app/screens/dashboard/dashboard_screen.dart';
@@ -19,8 +20,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case AddNewCardRoute:
       return MaterialPageRoute(builder: (context) => NewBoardScreen(), fullscreenDialog: true);
     case ViewBoardRoute:
-      var title = settings.arguments as String;
-      return MaterialPageRoute(builder: (context) => TaskListScreen(title: title));
+      var board = settings.arguments as HLBoard;
+      return MaterialPageRoute(builder: (context) => TaskListScreen(board: board));
     defalult:
       return MaterialPageRoute(builder: (context) => SplashScreen());
   }

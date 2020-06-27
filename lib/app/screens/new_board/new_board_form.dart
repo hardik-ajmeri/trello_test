@@ -4,7 +4,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:trellotest/app/helpers/hex_color.dart';
 import 'package:trellotest/app/model/board_category.dart';
+import 'package:trellotest/app/model/hl_lables.dart';
 import 'package:trellotest/app/navigation/routes.dart';
 import 'package:trellotest/app/screens/new_board/bloc/bloc.dart';
 
@@ -20,8 +22,9 @@ class _NewBoardFormState extends State<NewBoardForm> {
   final TextEditingController _descriptionController = TextEditingController();
 
   NewBoardBloc _bloc;
-  int _selectedIndex;
+  int _selectedCategoryIndex, _selectedLableIndex;
   BoardCategory cats;
+  List<HLLables> lablesList = List<HLLables>();
   final focus = FocusNode();
 
   bool get isPopulated =>
@@ -60,7 +63,8 @@ class _NewBoardFormState extends State<NewBoardForm> {
         if (state.isSuccess) {
           _nameController.text = "";
           _descriptionController.text = "";
-          _selectedIndex = null;
+          _selectedCategoryIndex = null;
+          _selectedLableIndex = null;
 
           Scaffold.of(context)
             ..hideCurrentSnackBar()
@@ -212,6 +216,32 @@ class _NewBoardFormState extends State<NewBoardForm> {
                                   },
                                 ),
                                 SizedBox(height: 24.0),
+                                Text('Labels',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 19,
+                                        color: Colors.black87)),
+                                SizedBox(height: 8.0),
+                                StreamBuilder(
+                                  stream: _bloc.getLables(),
+                                  builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                                    lablesList.clear();
+                                    if (snapshot.hasData) {
+                                      snapshot.data.documents.forEach((element) {
+                                        lablesList.add(HLLables.fromJson(jsonDecode(jsonEncode(element.data))));
+                                      });
+
+                                      if(lablesList.length > 0) {
+                                        return buildLablesList(context, lablesList);
+                                      } else  {
+                                        return Container();
+                                      }
+                                    } else  {
+                                      return Container();
+                                    }
+                                  },
+                                ),
+                                SizedBox(height: 24.0),
                                 Text('Description',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w500,
@@ -301,7 +331,7 @@ class _NewBoardFormState extends State<NewBoardForm> {
   Widget buildCategoryList(List<String> categories, BuildContext context) {
     _onSelected(int index) {
       setState(() {
-        _selectedIndex = index;
+        _selectedCategoryIndex = index;
         _onTypeChanged();
       });
     }
@@ -321,23 +351,23 @@ class _NewBoardFormState extends State<NewBoardForm> {
                       style: TextStyle(
                           fontSize: 17,
                           fontWeight:
-                              _selectedIndex != null && _selectedIndex == index
+                              _selectedCategoryIndex != null && _selectedCategoryIndex == index
                                   ? FontWeight.bold
                                   : FontWeight.normal,
                           color:
-                              _selectedIndex != null && _selectedIndex == index
+                          _selectedCategoryIndex != null && _selectedCategoryIndex == index
                                   ? Theme.of(context).primaryColor
                                   : Colors.black)),
                   onTap: () => _onSelected(index),
-                  trailing: _selectedIndex != null && _selectedIndex == index
+                  trailing: _selectedCategoryIndex != null && _selectedCategoryIndex == index
                       ? SizedBox(
                           width: 24,
                           height: 24,
                           child: Icon(
                             Icons.check,
                             size: 24,
-                            color: _selectedIndex != null &&
-                                    _selectedIndex == index
+                            color: _selectedCategoryIndex != null &&
+                                _selectedCategoryIndex == index
                                 ? Theme.of(context).primaryColor
                                 : Colors.black,
                           ))
@@ -348,6 +378,51 @@ class _NewBoardFormState extends State<NewBoardForm> {
               separatorBuilder: (BuildContext context, int index) => Divider(),
               itemCount: categories.length),
         ));
+  }
+
+  Widget buildLablesList(BuildContext context, List<HLLables> lables) {
+    _onSelected(int index) {
+      setState(() {
+        _selectedLableIndex = index;
+        _onLabelChanged();
+      });
+    }
+
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.8,
+      height: 32,
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () => _onSelected(index),
+            child: Container(
+              height: 32,
+              width: 32,
+              margin: EdgeInsets.symmetric(horizontal: (MediaQuery.of(context).size.width/lables.length)*0.175),
+              padding: EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                      color: _selectedLableIndex == index ? Theme.of(context).primaryColor : Colors.transparent,
+                      width: _selectedLableIndex == index ? 2 : 0
+                  )
+              ),
+              child: Container(
+                height: 30,
+                width: 30,
+                decoration: BoxDecoration(
+                  color: HexColor(lables[index].color_code != null ? lables[index].color_code : Colors.black),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            ),
+          );
+        },
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        itemCount: lables.length,
+      ),
+    );
   }
 
   @override
@@ -365,20 +440,30 @@ class _NewBoardFormState extends State<NewBoardForm> {
   }
 
   void _onTypeChanged() {
-    if (cats.categories.length > 0 && _selectedIndex != null) {
-      _bloc.add(TypeChanged(type: cats.categories[_selectedIndex]));
+    if (cats.categories.length > 0 && _selectedCategoryIndex != null) {
+      _bloc.add(TypeChanged(type: cats.categories[_selectedCategoryIndex]));
     } else {
       _bloc.add(TypeChanged(type: cats.categories[0]));
     }
   }
 
+  void _onLabelChanged() {
+    if (lablesList.length > 0 && _selectedLableIndex != null) {
+      _bloc.add(LableChanged(color_code: lablesList[_selectedLableIndex].color_code));
+    } else {
+      _bloc.add(LableChanged(color_code: lablesList[0].color_code));
+    }
+  }
+
   void _onFormSubmitted() {
     if (_nameController.text.length > 0 &&
-        cats.categories[_selectedIndex] != null &&
+        cats.categories[_selectedCategoryIndex] != null &&
+        lablesList[_selectedLableIndex] != null &&
         _descriptionController.text.length > 0) {
       _bloc.add(Submitted(
           title: _nameController.text,
-          type: cats.categories[_selectedIndex],
+          type: cats.categories[_selectedCategoryIndex],
+          code: lablesList[_selectedLableIndex].color_code,
           desc: _descriptionController.text));
     }
   }

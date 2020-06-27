@@ -30,6 +30,17 @@ class TypeChanged extends NewBoardEvent {
   String toString() => 'TypeChanged { type: $type }';
 }
 
+class LableChanged extends NewBoardEvent {
+  final String color_code;
+  const LableChanged({@required this.color_code});
+
+  @override
+  List<Object> get props => [LableChanged];
+
+  @override
+  String toString() => 'LableChanged { type: $color_code }';
+}
+
 class DescriptionChanged extends NewBoardEvent {
   final String desc;
   const DescriptionChanged({@required this.desc});
@@ -44,17 +55,18 @@ class DescriptionChanged extends NewBoardEvent {
 class Submitted extends NewBoardEvent {
   final String title;
   final String type;
+  final String code;
   final String desc;
 
   const Submitted(
       {@required this.title,
-      @required this.type, @required this.desc});
+      @required this.type, @required this.code, @required this.desc});
 
   @override
-  List<Object> get props => [title, type, desc];
+  List<Object> get props => [title, type, code, desc];
 
   @override
   String toString() {
-    return 'Submitted { title: $title, type: $type, description: $desc }';
+    return 'Submitted { title: $title, type: $type, code: $code, description: $desc }';
   }
 }
