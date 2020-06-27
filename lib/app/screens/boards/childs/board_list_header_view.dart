@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trellotest/app/helpers/hex_color.dart';
 import 'package:trellotest/app/model/hl_board.dart';
 
 class BoardListHeaderView extends StatelessWidget {
@@ -66,9 +67,9 @@ class BoardListHeaderView extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                        color: Theme.of(context).primaryColor,
+                        color: _board.color_code != null ? HexColor(_board.color_code) : Theme.of(context).primaryColor,
                         borderRadius: BorderRadius.circular(10)),
-                    child: Text("Planning",
+                    child: Text(_board.tag != null ? _board.tag : "Planing",
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold)),
                   ),

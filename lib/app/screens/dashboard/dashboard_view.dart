@@ -176,47 +176,52 @@ class _DashboardViewState extends State<DashboardView> {
           itemCount: list.length,
           shrinkWrap: true,
           itemBuilder: (context, index) {
-            return Container(
-              height: 200,
-              width: 250,
-              margin: EdgeInsets.all(16),
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(color: Colors.black12, width: 2),
-                  boxShadow: [BoxShadow(
-                    blurRadius: 15.0,
-                    spreadRadius: 5.0,
-                    color: Colors.black.withAlpha(15)
-                  )],
-                  borderRadius: BorderRadius.circular(30)),
-              child: GestureDetector(
-                onTap: (){
-                  Navigator.pushNamed(context, ViewBoardRoute, arguments: list[index]);
+            return GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, ViewBoardRoute,
+                      arguments: list[index]);
                 },
-                child: Padding(
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      list[index].color_code != null ? Container(
-                        width: 100,
-                        height: 8,
-                        decoration: BoxDecoration(
-                          color: HexColor(list[index].color_code),
-                          shape: BoxShape.rectangle
-                        ),
-                      ) : Container(height: 0),
-                      SizedBox(height: 8),
-                      Text(list[index].title, style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold)),
-                      SizedBox(height: 8),
-                      Text(list[index].description, style: TextStyle(fontSize: 15))
-                    ],
+                child: Container(
+                  height: 200,
+                  width: 250,
+                  margin: EdgeInsets.all(16),
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.black12, width: 2),
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 15.0,
+                            spreadRadius: 5.0,
+                            color: Colors.black.withAlpha(15))
+                      ],
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Padding(
+                    padding: EdgeInsets.all(12),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        list[index].color_code != null
+                            ? Container(
+                                width: 100,
+                                height: 8,
+                                decoration: BoxDecoration(
+                                    color: HexColor(list[index].color_code),
+                                    shape: BoxShape.rectangle),
+                              )
+                            : Container(height: 0),
+                        SizedBox(height: 8),
+                        Text(list[index].title,
+                            style: TextStyle(
+                                fontSize: 19, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 8),
+                        Text(list[index].description,
+                            style: TextStyle(fontSize: 15))
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            );
+                ));
           }),
     );
   }
