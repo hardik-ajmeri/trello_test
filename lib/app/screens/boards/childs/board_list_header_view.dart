@@ -4,10 +4,12 @@ import 'package:trellotest/app/model/hl_board.dart';
 
 class BoardListHeaderView extends StatelessWidget {
   final HLBoard _board;
+  final VoidCallback _onPressed;
 
-  BoardListHeaderView({Key key, @required HLBoard board})
+  BoardListHeaderView({Key key, @required HLBoard board, @required VoidCallback onPressed})
       : assert(board != null),
         _board = board,
+        _onPressed = onPressed,
         super(key: key);
 
   @override
@@ -48,8 +50,17 @@ class BoardListHeaderView extends StatelessWidget {
               ),
               Row(
                 children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.notifications, size: 32),
+                  Container(
+                    height: 32,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    child: FlatButton(
+                      padding: const EdgeInsets.all(8.0),
+                      onPressed: _onPressed,
+                      child: Text("Add Card", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                    ),
                   ),
                   IconButton(
                     icon: Icon(Icons.more_vert, size: 32),
@@ -71,10 +82,10 @@ class BoardListHeaderView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10)),
                     child: Text(_board.tag != null ? _board.tag : "Planing",
                         style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold)),
+                            color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold)),
                   ),
                   Text("4 Members in this board",
-                      style: TextStyle(fontWeight: FontWeight.bold))
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13))
                 ],
               )),
           SizedBox(height: 8.0),

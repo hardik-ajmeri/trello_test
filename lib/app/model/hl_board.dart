@@ -7,6 +7,7 @@ class HLBoard {
   final String category;
   final String color_code;
   final String tag;
+  final List<String> cardIds;
   final String description;
   final String createdAt;
   final String visitedAt;
@@ -16,6 +17,7 @@ class HLBoard {
     this.category,
     this.color_code,
     this.tag,
+    this.cardIds,
     this.description,
     this.createdAt,
     this.visitedAt,

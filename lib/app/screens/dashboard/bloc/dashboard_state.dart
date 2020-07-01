@@ -1,4 +1,3 @@
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:meta/meta.dart';
 
 @immutable

@@ -7,7 +7,6 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:trellotest/app/helpers/hex_color.dart';
 import 'package:trellotest/app/model/board_category.dart';
 import 'package:trellotest/app/model/hl_lables.dart';
-import 'package:trellotest/app/navigation/routes.dart';
 import 'package:trellotest/app/screens/new_board/bloc/bloc.dart';
 
 class NewBoardForm extends StatefulWidget {

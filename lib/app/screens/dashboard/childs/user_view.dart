@@ -26,26 +26,26 @@ class UserView extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  HLTrello(context),
+                  hlTrello(context),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.5),
-                  TrelloUser(context)
+                  trelloUser(context)
                 ],
               ),
               SizedBox(height: 8.0),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32),
-                child: UserMessage(context),
+                child: userMessage(context),
               ),
               SizedBox(height: 8.0),
-              SearchBar(context),
-              BoardTab(context),
+              searchBar(context),
+              boardTab(context),
               SizedBox(height: 4.0),
             ],
           ),
         ));
   }
 
-  Widget HLTrello(BuildContext context) {
+  Widget hlTrello(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -65,7 +65,7 @@ class UserView extends StatelessWidget {
     );
   }
 
-  Widget TrelloUser(BuildContext context) {
+  Widget trelloUser(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -82,7 +82,7 @@ class UserView extends StatelessWidget {
     );
   }
 
-  Widget UserMessage(BuildContext context) {
+  Widget userMessage(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -99,7 +99,7 @@ class UserView extends StatelessWidget {
     );
   }
 
-  Widget SearchBar(BuildContext context) {
+  Widget searchBar(BuildContext context) {
     return  Padding(
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Container(
@@ -124,7 +124,7 @@ class UserView extends StatelessWidget {
     );
   }
 
-  Widget BoardTab(BuildContext context) {
+  Widget boardTab(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: TabBar(

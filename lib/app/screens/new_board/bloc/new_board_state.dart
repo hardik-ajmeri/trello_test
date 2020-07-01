@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
 
 @immutable
-class NewBoardState {
+  class NewBoardState {
   final bool isValidName;
   final bool isValidType;
   final bool isValidLable;

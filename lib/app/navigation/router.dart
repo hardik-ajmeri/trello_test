@@ -22,7 +22,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case ViewBoardRoute:
       var board = settings.arguments as HLBoard;
       return MaterialPageRoute(builder: (context) => TaskListScreen(board: board));
-    defalult:
-      return MaterialPageRoute(builder: (context) => SplashScreen());
+//    defalult:
+//      return MaterialPageRoute(builder: (context) => SplashScreen());
   }
 }

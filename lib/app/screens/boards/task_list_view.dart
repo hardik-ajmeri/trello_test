@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trellotest/app/helpers/draggable_helper/drag_and_drop_list.dart';
 import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/screens/boards/childs/board_list_header_view.dart';
+import 'package:trellotest/app/screens/boards/childs/reorderable_task_list_view.dart';
 
 class TaskListView extends StatefulWidget {
   final HLBoard _board;
@@ -146,10 +147,13 @@ class _TaskListViewState extends State<TaskListView> {
           scrollDirection: Axis.horizontal,
           itemCount: cards.length + 1,
           itemBuilder: (context, index) {
-            if (index == cards.length)
+            if (index == cards.length) {
               return _buildAddCardWidget(context);
-            else
+            } else if (index == cards.length + 1) {
+              return ReorderableTaskListView();
+            } else {
               return _buildCard(context, index);
+            }
           },
         ))
       ],

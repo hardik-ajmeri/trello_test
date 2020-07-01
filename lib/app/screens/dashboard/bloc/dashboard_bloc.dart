@@ -1,12 +1,9 @@
 import 'dart:async';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:trellotest/app/helpers/fs_helper.dart';
-import 'package:trellotest/app/model/hl_board.dart';
-
 import 'bloc.dart';
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:trellotest/app/helpers/fs_helper.dart';
 
 class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
   @override

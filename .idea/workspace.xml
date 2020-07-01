@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="Added">
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/bloc/bloc.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/card_task_list_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/app/screens/boards/childs/reorderable_task_list_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/helpers/fs_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/helpers/fs_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/model/board_category.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/model/board_category.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/model/hl_board.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/model/hl_board.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/model/hl_board.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/model/hl_board.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/navigation/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/navigation/router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_state.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/childs/board_list_header_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/childs/board_list_header_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_bloc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/bloc/dashboard_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/childs/user_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/dashboard/dashboard_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/home/tab_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/home/tab_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/new_board/bloc/new_board_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/new_board/new_board_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/splash/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,12 +49,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Specification" />
-        <option value="stateful_widget" />
         <option value="stateless_widget" />
         <option value="event" />
         <option value="state" />
         <option value="bloc" />
         <option value="Dart File" />
+        <option value="stateful_widget" />
       </list>
     </option>
   </component>
@@ -51,8 +83,16 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/app/screens/boards" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -76,38 +116,58 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="366" y="259" key="#PSD" timestamp="1593340776846">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="366" y="259" key="#PSD/0.23.1920.1119@0.23.1920.1119" timestamp="1593340776846" />
     <state x="648" y="309" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1593261255602">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="648" y="309" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1593261255602" />
-    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592478600926">
+    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593516665933">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1592478600926" />
-    <state x="808" y="342" key="AndroidProcessChooserDialog" timestamp="1593244900108">
+    <state x="635" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1593516665933" />
+    <state x="808" y="342" key="AndroidProcessChooserDialog" timestamp="1593434174837">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="808" y="342" key="AndroidProcessChooserDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1593244900108" />
+    <state x="808" y="342" key="AndroidProcessChooserDialog/0.23.1920.1119@0.23.1920.1119" timestamp="1593434174837" />
     <state x="516" y="119" key="CommitChangelistDialog2" timestamp="1591934960874">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="516" y="119" key="CommitChangelistDialog2/0.23.1920.1119@0.23.1920.1119" timestamp="1591934960874" />
-    <state width="1844" height="295" key="GridCell.Tab.0.bottom" timestamp="1593265422304">
+    <state width="1866" height="295" key="GridCell.Tab.0.bottom" timestamp="1593541343364">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1844" height="295" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1593265422304" />
-    <state width="1844" height="295" key="GridCell.Tab.0.center" timestamp="1593265422304">
+    <state width="1866" height="295" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1593541343364" />
+    <state width="1866" height="295" key="GridCell.Tab.0.center" timestamp="1593541343363">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1844" height="295" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1593265422304" />
-    <state width="1844" height="295" key="GridCell.Tab.0.left" timestamp="1593265422303">
+    <state width="1866" height="295" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1593541343363" />
+    <state width="1866" height="295" key="GridCell.Tab.0.left" timestamp="1593541343362">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1844" height="295" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1593265422303" />
-    <state width="1844" height="295" key="GridCell.Tab.0.right" timestamp="1593265422304">
+    <state width="1866" height="295" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1593541343362" />
+    <state width="1866" height="295" key="GridCell.Tab.0.right" timestamp="1593541343363">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1844" height="295" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1593265422304" />
+    <state width="1866" height="295" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1593541343363" />
+    <state width="1866" height="248" key="GridCell.Tab.1.bottom" timestamp="1593522723436">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state width="1866" height="248" key="GridCell.Tab.1.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1593522723436" />
+    <state width="1866" height="248" key="GridCell.Tab.1.center" timestamp="1593522723436">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state width="1866" height="248" key="GridCell.Tab.1.center/0.23.1920.1119@0.23.1920.1119" timestamp="1593522723436" />
+    <state width="1866" height="248" key="GridCell.Tab.1.left" timestamp="1593522723436">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state width="1866" height="248" key="GridCell.Tab.1.left/0.23.1920.1119@0.23.1920.1119" timestamp="1593522723436" />
+    <state width="1866" height="248" key="GridCell.Tab.1.right" timestamp="1593522723436">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state width="1866" height="248" key="GridCell.Tab.1.right/0.23.1920.1119@0.23.1920.1119" timestamp="1593522723436" />
     <state x="360" y="134" key="SettingsEditor" timestamp="1593162905615">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
@@ -124,13 +184,17 @@
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state x="581" y="288" width="757" height="588" key="find.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1591903129956" />
-    <state x="541" y="267" width="838" height="1032" key="run.anything.popup" timestamp="1593256532827">
+    <state width="750" height="530" key="javadoc.popup" timestamp="1593338025117">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="541" y="267" width="838" height="1032" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1593256532827" />
-    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup" timestamp="1592373283571">
+    <state width="750" height="530" key="javadoc.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1593338025117" />
+    <state x="541" y="267" width="838" height="1032" key="run.anything.popup" timestamp="1593536866241">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1592373283571" />
+    <state x="541" y="267" width="838" height="1032" key="run.anything.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1593536866241" />
+    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup" timestamp="1593534910890">
+      <screen x="0" y="23" width="1920" height="1119" />
+    </state>
+    <state x="541" y="110" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1119@0.23.1920.1119" timestamp="1593534910890" />
   </component>
 </project>

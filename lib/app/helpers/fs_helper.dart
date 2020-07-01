@@ -1,9 +1,9 @@
 import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:trellotest/app/model/board_category.dart';
-import 'package:trellotest/app/model/board_list.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:trellotest/app/model/hl_board.dart';
+import 'package:trellotest/app/model/hl_card.dart';
+import 'package:trellotest/app/model/hl_task.dart';
 import 'fs_constants.dart' as FSConstants;
 
 class FSHelper {
@@ -59,6 +59,75 @@ class FSHelper {
   Stream<QuerySnapshot> getWorkBoards() {
     try {
       return  _firestore.collection(FSConstants.FS_Boards).where("category", isEqualTo: "Work").snapshots();
+    } catch (error) {
+      print(error.toString());
+      return null;
+    }
+  }
+
+  Future<void> updateBoard(HLBoard board) async {
+    try {
+      QuerySnapshot qs = await _firestore.collection(FSConstants.FS_Boards).where("title", isEqualTo: board.title).getDocuments();
+      if (qs != null) {
+        return qs.documents[0].reference.updateData(board.toJson());
+      }
+    } catch (error) {
+      print(error.toString());
+      return null;
+    }
+  }
+
+
+  Future<DocumentReference> addNewCard(HLCard card) async {
+    try {
+      DocumentReference ref = await _firestore.collection(FSConstants.FS_Cards).add(card.toJson());
+      print("New Card ID: " + ref.documentID);
+      return ref;
+    } catch(error){
+      print(error.toString());
+      return null;
+    }
+  }
+
+  Future<DocumentReference> addNewTask(HLTask task) async {
+    try {
+      DocumentReference ref = await _firestore.collection(FSConstants.FS_Tasks).add(task.toJson());
+      print("New Task ID: " + ref.documentID);
+      return ref;
+    } catch(error){
+      print(error.toString());
+      return null;
+    }
+  }
+
+  Future<void> updateTask(String documentId, HLTask task) async {
+    try {
+      await _firestore.document(documentId).updateData(task.toJson());
+    } catch(error) {
+      print(error.toString());
+    }
+  }
+
+  Future<void> updateCard(String documentId, HLCard card) async {
+    try {
+      await _firestore.document(documentId).updateData(card.toJson());
+    } catch(error) {
+      print(error.toString());
+    }
+  }
+
+  Stream<QuerySnapshot> getCards() {
+    try {
+      return _firestore.collection(FSConstants.FS_Cards).snapshots();
+    } catch (error) {
+      print(error.toString());
+      return null;
+    }
+  }
+
+  Stream<QuerySnapshot> getTasks() {
+    try {
+      return _firestore.collection(FSConstants.FS_Tasks).snapshots();
     } catch (error) {
       print(error.toString());
       return null;

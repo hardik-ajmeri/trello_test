@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:trellotest/app/navigation/routes.dart';
 import 'package:trellotest/app/screens/dashboard/dashboard_screen.dart';
 import 'package:trellotest/app/screens/new_board/new_board_screen.dart';
 

@@ -109,7 +109,7 @@ class _DashboardViewState extends State<DashboardView> {
                                 }
                               });
                               if (personalBoards != null) {
-                                return BoardCard(context, personalBoards, true);
+                                return boardCard(context, personalBoards, true);
                               } else {
                                 return Text('No boards to show.');
                               }
@@ -147,7 +147,7 @@ class _DashboardViewState extends State<DashboardView> {
                               });
 
                               if (workBoards != null) {
-                                return BoardCard(context, workBoards, false);
+                                return boardCard(context, workBoards, false);
                               } else {
                                 return Text('No boards to show.');
                               }
@@ -168,7 +168,7 @@ class _DashboardViewState extends State<DashboardView> {
     );
   }
 
-  Widget BoardCard(BuildContext context, List<HLBoard> list, bool isPersonal) {
+  Widget boardCard(BuildContext context, List<HLBoard> list, bool isPersonal) {
     return Container(
       height: 200,
       child: ListView.builder(
