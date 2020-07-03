@@ -50,7 +50,7 @@ class TaskListBloc extends Bloc<TaskListEvent, TaskListState> {
     } else if (event is TaskMovedToOtherCard) {
       yield* _mapTaskMovedtoOtherCardState(event.oldCardId, event.newCardId, event.taskIndex);
     } else if (event is SubmittedTask) {
-      yield* _mapTaskSubmittedToState(event.title, event.index);
+      yield* _mapTaskSubmittedToState(event.title, event.card);
     } else if (event is SubmittedCard) {
       yield* _mapCardSubmittedToState(event.card, event.board);
     }
@@ -76,6 +76,7 @@ class TaskListBloc extends Bloc<TaskListEvent, TaskListState> {
   Stream<TaskListState> _mapTaskMovedtoSameCardState(HLTask task, int oldIndex, int newIndex) async* {
     yield TaskListState.loading();
     try {
+      await FSHelper().updateTask(task.documentId, task);
       yield TaskListState.success();
     } catch(_) {
       yield TaskListState.failure();
@@ -91,17 +92,28 @@ class TaskListBloc extends Bloc<TaskListEvent, TaskListState> {
   }
 
   Stream<TaskListState> _mapTaskSubmittedToState(
-      String title, int index) async* {
+      String title, HLCard card) async* {
     yield TaskListState.loading();
     try {
-      HLTask task = HLTask(title: title, currentIndex: index);
+      HLTask task;
+      if(card.taskIdList != null ) {
+        task = HLTask(title: title, currentIndex: card.taskIdList.length+1);
+      } else {
+        task = HLTask(title: title, currentIndex: 0);
+      }
       DocumentReference ref = await FSHelper().addNewTask(task);
       if (ref.documentID != null) {
+        if(card.taskIdList == null) {
+          card.taskIdList = List<String>();
+        }
+        card.taskIdList.add(ref.documentID);
+        await FSHelper().updateTasks(card);
         yield TaskListState.success();
       } else {
         yield TaskListState.failure();
       }
-    } catch (_) {
+    } catch (error) {
+      print(error.toString());
       TaskListState.failure();
     }
   }

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/screens/boards/bloc/bloc.dart';
 import 'package:trellotest/app/screens/boards/card_task_list_view.dart';
+import 'package:trellotest/app/screens/boards/task_list_view.dart';
 
 class TaskListScreen extends StatelessWidget {
   final HLBoard _board;
@@ -24,7 +25,8 @@ class TaskListScreen extends StatelessWidget {
               currentFocus.unfocus();
             }
           },
-          child: CardTaskListView(board: _board),
+          //child: CardTaskListView(board: _board),
+          child: TaskListView(board: _board),
         )
       ),
     );

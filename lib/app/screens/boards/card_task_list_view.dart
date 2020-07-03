@@ -9,6 +9,7 @@ import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/model/hl_card.dart';
 import 'package:trellotest/app/screens/boards/bloc/bloc.dart';
 import 'package:trellotest/app/screens/boards/childs/board_list_header_view.dart';
+import 'package:trellotest/app/screens/boards/childs/no_data_view.dart';
 import 'package:trellotest/app/screens/boards/childs/reorderable_task_list_view.dart';
 
 class CardTaskListView extends StatefulWidget {
@@ -28,7 +29,6 @@ class _CardTaskListViewState extends State<CardTaskListView> {
   List<HLCard> cards = List<HLCard>();
   final focus = FocusNode();
   TextEditingController _cardTitleController = TextEditingController();
-  TextEditingController _taskTitleController = TextEditingController();
 
   @override
   void initState() {
@@ -88,9 +88,11 @@ class _CardTaskListViewState extends State<CardTaskListView> {
         builder: (context, state) {
           return Column(
             children: <Widget>[
-              BoardListHeaderView(board: widget._board, onPressed: () {
-                showMyDialog(context, state);
-              }),
+              BoardListHeaderView(
+                  board: widget._board,
+                  onPressed: () {
+                    showMyDialog(context, state);
+                  }),
               Container(
                 height: MediaQuery.of(context).size.height * 0.7,
                 child: StreamBuilder(
@@ -100,16 +102,22 @@ class _CardTaskListViewState extends State<CardTaskListView> {
                     if (snapshot.data != null) {
                       cards.clear();
                       var cardDocs = snapshot.data.documents;
-                      for (var i = 0; i < widget._board.cardIds.length; i++) {
-                        for (var j = 0; j < cardDocs.length; j++) {
-                          if (widget._board.cardIds[i] ==
-                              cardDocs[j].documentID) {
-                            cards.add(HLCard.fromJson(
-                                jsonDecode(jsonEncode(cardDocs[j].data))));
+                      if (widget._board.cardIds != null) {
+                        for (var i = 0; i < widget._board.cardIds.length; i++) {
+                          for (var j = 0; j < cardDocs.length; j++) {
+                            if (widget._board.cardIds[i] ==
+                                cardDocs[j].documentID) {
+                              cards.add(HLCard.fromJson(
+                                  jsonDecode(jsonEncode(cardDocs[j].data))));
+                            }
                           }
                         }
                       }
-                      return _buildReordarableListView(context, cards, state);
+                      if (cards.length == 0 || cards == null) {
+                        return NoDataView();
+                      } else {
+                        return _buildReordarableListView(context, cards, state);
+                      }
                     } else {
                       return Center(
                           child: SpinKitFadingCircle(
@@ -132,7 +140,7 @@ class _CardTaskListViewState extends State<CardTaskListView> {
       shrinkWrap: true,
       itemCount: cards.length,
       itemBuilder: (context, index) {
-          return ReorderableTaskListView(card: cards[index]);
+        return ReorderableTaskListView(card: cards[index]);
       },
     );
   }
@@ -226,7 +234,8 @@ class _CardTaskListViewState extends State<CardTaskListView> {
   }
 
   void _onNewCardSubmit() {
-    _bloc.add(SubmittedCard(card: _cardTitleController.text, board: widget._board));
+    _bloc.add(
+        SubmittedCard(card: _cardTitleController.text, board: widget._board));
     Navigator.of(context).pop(true);
   }
 }

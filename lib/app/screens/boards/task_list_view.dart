@@ -222,10 +222,6 @@ class _TaskListViewState extends State<TaskListView> {
   }
 
   Widget _buildCard(BuildContext context, int index) {
-    // return Container(
-    //         width: 300.0,
-    //   child: ,
-    // );
     return Container(
       child: Stack(
         children: <Widget>[

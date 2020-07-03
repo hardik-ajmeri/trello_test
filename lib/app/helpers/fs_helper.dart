@@ -18,17 +18,9 @@ class FSHelper {
     _firestore = Firestore.instance;
   }
 
-  Future<DocumentReference> addNewBoard(HLBoard board) async {
-    try {
-      DocumentReference ref = await _firestore.collection(FSConstants.FS_Boards).add(board.toJson());
-      print("New Board ID: " + ref.documentID);
-      return ref;
-    } catch(error){
-      print(error.toString());
-      return null;
-    }
-  }
-
+  ////////////////////////////////////////////////////////////////////////
+  //////////////////////////// Get Data //////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
   Stream<QuerySnapshot> getCategories() {
     try {
       return _firestore.collection(FSConstants.FS_BoardCategory).snapshots();
@@ -65,18 +57,39 @@ class FSHelper {
     }
   }
 
-  Future<void> updateBoard(HLBoard board) async {
+  Stream<QuerySnapshot> getCards() {
     try {
-      QuerySnapshot qs = await _firestore.collection(FSConstants.FS_Boards).where("title", isEqualTo: board.title).getDocuments();
-      if (qs != null) {
-        return qs.documents[0].reference.updateData(board.toJson());
-      }
+      return _firestore.collection(FSConstants.FS_Cards).snapshots();
     } catch (error) {
       print(error.toString());
       return null;
     }
   }
 
+  Stream<QuerySnapshot> getTasks() {
+    try {
+      return _firestore.collection(FSConstants.FS_Tasks).snapshots();
+    } catch (error) {
+      print(error.toString());
+      return null;
+    }
+  }
+
+
+  ////////////////////////////////////////////////////////////////////////
+  //////////////////////////// Add Data //////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
+
+  Future<DocumentReference> addNewBoard(HLBoard board) async {
+    try {
+      DocumentReference ref = await _firestore.collection(FSConstants.FS_Boards).add(board.toJson());
+      print("New Board ID: " + ref.documentID);
+      return ref;
+    } catch(error){
+      print(error.toString());
+      return null;
+    }
+  }
 
   Future<DocumentReference> addNewCard(HLCard card) async {
     try {
@@ -100,6 +113,35 @@ class FSHelper {
     }
   }
 
+
+  ////////////////////////////////////////////////////////////////////////
+  /////////////////////////// Update Data ////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
+
+  Future<void> updateBoard(HLBoard board) async {
+    try {
+      QuerySnapshot qs = await _firestore.collection(FSConstants.FS_Boards).where("title", isEqualTo: board.title).getDocuments();
+      if (qs != null) {
+        return qs.documents[0].reference.updateData(board.toJson());
+      }
+    } catch (error) {
+      print(error.toString());
+      return null;
+    }
+  }
+
+  Future<void> updateTasks(HLCard card) async {
+    try {
+      QuerySnapshot qs = await _firestore.collection(FSConstants.FS_Cards).where("title", isEqualTo: card.title).getDocuments();
+      if (qs != null) {
+        return qs.documents[0].reference.updateData(card.toJson());
+      }
+    } catch (error) {
+      print(error.toString());
+      return null;
+    }
+  }
+
   Future<void> updateTask(String documentId, HLTask task) async {
     try {
       await _firestore.document(documentId).updateData(task.toJson());
@@ -116,21 +158,4 @@ class FSHelper {
     }
   }
 
-  Stream<QuerySnapshot> getCards() {
-    try {
-      return _firestore.collection(FSConstants.FS_Cards).snapshots();
-    } catch (error) {
-      print(error.toString());
-      return null;
-    }
-  }
-
-  Stream<QuerySnapshot> getTasks() {
-    try {
-      return _firestore.collection(FSConstants.FS_Tasks).snapshots();
-    } catch (error) {
-      print(error.toString());
-      return null;
-    }
-  }
 }

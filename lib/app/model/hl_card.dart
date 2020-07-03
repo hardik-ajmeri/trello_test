@@ -4,7 +4,7 @@ part 'hl_card.g.dart';
 @JsonSerializable()
 class HLCard {
   final String title;
-  final List<String> taskIdList;
+  List<String> taskIdList;
 
   HLCard({this.title, this.taskIdList});
 

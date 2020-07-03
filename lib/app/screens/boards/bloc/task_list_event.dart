@@ -1,6 +1,7 @@
 import 'package:meta/meta.dart';
 import 'package:equatable/equatable.dart';
 import 'package:trellotest/app/model/hl_board.dart';
+import 'package:trellotest/app/model/hl_card.dart';
 import 'package:trellotest/app/model/hl_task.dart';
 
 abstract class TaskListEvent extends Equatable {
@@ -71,14 +72,14 @@ class TaskMovedToSameCard extends TaskListEvent {
 
 class SubmittedTask extends TaskListEvent {
   final String title;
-  final int index;
-  const SubmittedTask({@required this.title, @required this.index});
+  final HLCard card;
+  const SubmittedTask({@required this.title, @required this.card});
 
   @override
-  List<Object> get props => [title, index];
+  List<Object> get props => [title, card];
 
   @override
-  String toString() => 'SubmittedTask { title: $title, index: $index }';
+  String toString() => 'SubmittedTask { title: $title, card: $card }';
 }
 
 class SubmittedCard extends TaskListEvent {
