@@ -208,9 +208,6 @@ class _ReorderableTaskListViewState extends State<ReorderableTaskListView> {
         newIndex -= 1;
       }
       HLTask task = tasks.removeAt(oldIndex);
-      task.title = tasks[newIndex].title;
-      task.currentIndex = newIndex;
-      task.documentId = tasks[newIndex].documentId;
       tasks.insert(newIndex, task);
       _onTaskMovedtoSameList(task, oldIndex, newIndex);
     });
@@ -323,27 +320,27 @@ class TaskListCard extends StatefulWidget {
 class _TaskListCardState extends State<TaskListCard> {
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.all(12),
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        side: BorderSide(color: Colors.black38, width: 1),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Container(
-        width: 240,
-        padding: EdgeInsets.all(8.0),
-        margin: EdgeInsets.all(8.0),
-        child: Text(widget.tasks[widget.index].title,
-            style: TextStyle(fontSize: 19)),
-      ),
-    );
-//    return Draggable(
-//      feedback: super.widget,
-//      child: taskCard(context),
-//      childWhenDragging: taskWhileDraggingCard(context),
-//      data: widget.tasks[widget.index],
+//    return Card(
+//      margin: EdgeInsets.all(12),
+//      color: Colors.white,
+//      shape: RoundedRectangleBorder(
+//        side: BorderSide(color: Colors.black38, width: 1),
+//        borderRadius: BorderRadius.circular(10),
+//      ),
+//      child: Container(
+//        width: 240,
+//        padding: EdgeInsets.all(8.0),
+//        margin: EdgeInsets.all(8.0),
+//        child: Text(widget.tasks[widget.index].title,
+//            style: TextStyle(fontSize: 19)),
+//      ),
 //    );
+    return Draggable(
+      feedback: super.widget,
+      child: taskCard(context),
+      childWhenDragging: taskWhileDraggingCard(context),
+      data: widget.tasks[widget.index],
+    );
   }
 
   Widget taskCard(BuildContext context) {

@@ -76,6 +76,8 @@ class TaskListBloc extends Bloc<TaskListEvent, TaskListState> {
   Stream<TaskListState> _mapTaskMovedtoSameCardState(HLTask task, int oldIndex, int newIndex) async* {
     yield TaskListState.loading();
     try {
+      HLTask newTask = task;
+      newTask.currentIndex = newIndex;
       await FSHelper().updateTask(task.documentId, task);
       yield TaskListState.success();
     } catch(_) {

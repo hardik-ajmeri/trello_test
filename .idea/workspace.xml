@@ -7,12 +7,9 @@
     <list default="true" id="f995e97a-b800-4b5a-8830-94616cd72ba2" name="Default Changelist" comment="Added">
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/helpers/fs_helper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/model/hl_task.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/model/hl_task.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/card_task_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/card_task_list_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/model/hl_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/model/hl_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/bloc/task_list_bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/childs/reorderable_task_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/childs/reorderable_task_list_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/screens/boards/task_list_view.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,22 +112,22 @@
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
     <state width="507" height="582" key="DebuggerActiveHint/0.23.1920.1119@0.23.1920.1119" timestamp="1594015597461" />
-    <state width="1866" height="248" key="GridCell.Tab.0.bottom" timestamp="1594102124707">
+    <state width="1866" height="295" key="GridCell.Tab.0.bottom" timestamp="1594121303299">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="248" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1594102124707" />
-    <state width="1866" height="248" key="GridCell.Tab.0.center" timestamp="1594102124706">
+    <state width="1866" height="295" key="GridCell.Tab.0.bottom/0.23.1920.1119@0.23.1920.1119" timestamp="1594121303299" />
+    <state width="1866" height="295" key="GridCell.Tab.0.center" timestamp="1594121303298">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="248" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1594102124706" />
-    <state width="1866" height="248" key="GridCell.Tab.0.left" timestamp="1594102124705">
+    <state width="1866" height="295" key="GridCell.Tab.0.center/0.23.1920.1119@0.23.1920.1119" timestamp="1594121303298" />
+    <state width="1866" height="295" key="GridCell.Tab.0.left" timestamp="1594121303298">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="248" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1594102124705" />
-    <state width="1866" height="248" key="GridCell.Tab.0.right" timestamp="1594102124707">
+    <state width="1866" height="295" key="GridCell.Tab.0.left/0.23.1920.1119@0.23.1920.1119" timestamp="1594121303298" />
+    <state width="1866" height="295" key="GridCell.Tab.0.right" timestamp="1594121303298">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>
-    <state width="1866" height="248" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1594102124707" />
+    <state width="1866" height="295" key="GridCell.Tab.0.right/0.23.1920.1119@0.23.1920.1119" timestamp="1594121303298" />
     <state width="1866" height="248" key="GridCell.Tab.1.bottom" timestamp="1594102124708">
       <screen x="0" y="23" width="1920" height="1119" />
     </state>

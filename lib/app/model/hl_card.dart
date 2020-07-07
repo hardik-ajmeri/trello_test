@@ -5,8 +5,9 @@ part 'hl_card.g.dart';
 class HLCard {
   final String title;
   List<String> taskIdList;
+  String documentId;
 
-  HLCard({this.title, this.taskIdList});
+  HLCard({this.title, this.taskIdList, this.documentId});
 
   factory HLCard.fromJson(Map<String, dynamic> json) => _$HLCardFromJson(json);
   Map<String, dynamic> toJson() => _$HLCardToJson(this);
