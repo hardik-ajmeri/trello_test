@@ -3,8 +3,8 @@ part 'hl_task.g.dart';
 
 @JsonSerializable()
 class HLTask {
-  final String title;
-  final int currentIndex;
+  String title;
+  int currentIndex;
   String documentId;
 
   HLTask({this.title, this.currentIndex, this.documentId});

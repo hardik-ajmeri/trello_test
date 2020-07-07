@@ -144,7 +144,7 @@ class FSHelper {
 
   Future<void> updateTask(String documentId, HLTask task) async {
     try {
-      await _firestore.document(documentId).updateData(task.toJson());
+      await _firestore.document(FSConstants.FS_Tasks+"/"+documentId).updateData(task.toJson());
     } catch(error) {
       print(error.toString());
     }

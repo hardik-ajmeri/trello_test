@@ -4,10 +4,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:trellotest/app/main_app.dart';
+import 'package:trellotest/app/model/hl_board.dart';
 import 'package:trellotest/app/model/hl_card.dart';
 import 'package:trellotest/app/model/hl_task.dart';
 import 'package:trellotest/app/screens/boards/bloc/bloc.dart';
+import 'package:trellotest/app/screens/boards/card_task_list_view.dart';
 import 'package:trellotest/app/screens/boards/childs/no_data_view.dart';
+import 'package:trellotest/app/screens/boards/task_list_screen.dart';
 
 class ReorderableTaskListView extends StatefulWidget {
   final HLCard _card;
@@ -33,6 +37,7 @@ class _ReorderableTaskListViewState extends State<ReorderableTaskListView> {
     super.initState();
     _bloc = BlocProvider.of<TaskListBloc>(context);
     _taskTitleController.addListener(_onTaskTitleChanged);
+    scrollController = ScrollController(initialScrollOffset: 50);
   }
 
   @override
@@ -45,47 +50,46 @@ class _ReorderableTaskListViewState extends State<ReorderableTaskListView> {
     return BlocListener<TaskListBloc, TaskListState>(
       listener: (context, state) {
         if (state.isSubmitting) {
-          Scaffold.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(
-              content: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Text('Submitting...'),
-                  SpinKitFadingCircle(color: Theme.of(context).primaryColor),
-                ],
-              ),
-            ));
+//          Scaffold.of(context)
+//            ..hideCurrentSnackBar()
+//            ..showSnackBar(SnackBar(
+//              content: Row(
+//                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                children: <Widget>[
+//                  Text('Submitting...'),
+//                  SpinKitFadingCircle(color: Theme.of(context).primaryColor),
+//                ],
+//              ),
+//            ));
         }
 
         if (state.isSuccess) {
           _taskTitleController.text = "";
-          //tasks.sort((o, n) => o.currentIndex.compareTo(n.currentIndex));
-          Scaffold.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(
-              content: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Task added successfully'),
-                    Icon(Icons.check_circle),
-                  ]),
-              backgroundColor: Colors.green,
-            ));
+//          Scaffold.of(context)
+//            ..hideCurrentSnackBar()
+//            ..showSnackBar(SnackBar(
+//              content: Row(
+//                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                  children: [
+//                    Text('Task added successfully'),
+//                    Icon(Icons.check_circle),
+//                  ]),
+//              backgroundColor: Colors.green,
+//            ));
         }
 
         if (state.isFailure) {
-          Scaffold.of(context)
-            ..hideCurrentSnackBar()
-            ..showSnackBar(SnackBar(
-              content: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('Failed to add new task'),
-                    Icon(Icons.error),
-                  ]),
-              backgroundColor: Colors.red,
-            ));
+//          Scaffold.of(context)
+//            ..hideCurrentSnackBar()
+//            ..showSnackBar(SnackBar(
+//              content: Row(
+//                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                  children: [
+//                    Text('Failed to add new task'),
+//                    Icon(Icons.error),
+//                  ]),
+//              backgroundColor: Colors.red,
+//            ));
         }
       },
       child: BlocBuilder<TaskListBloc, TaskListState>(
@@ -159,10 +163,11 @@ class _ReorderableTaskListViewState extends State<ReorderableTaskListView> {
                         }
                       }
 
+                      tasks.sort((o, n) => o.currentIndex.compareTo(n.currentIndex));
                       if (tasks.length == 0 || tasks == null) {
                         return NoDataView();
                       } else {
-                        return _buildTaskList(context, tasks);
+                        return _buildTaskList(context);
                       }
                     } else {
                       return Center(
@@ -179,7 +184,7 @@ class _ReorderableTaskListViewState extends State<ReorderableTaskListView> {
     );
   }
 
-  Widget _buildTaskList(BuildContext context, List<HLTask> tasks) {
+  Widget _buildTaskList(BuildContext context) {
     return Flexible(
       child: ReorderableListView(
         scrollController: scrollController,
@@ -198,28 +203,17 @@ class _ReorderableTaskListViewState extends State<ReorderableTaskListView> {
   }
 
   void _onReorder(int oldIndex, int newIndex) {
-    if (oldIndex < newIndex) {
-      //dragging from top to bottom
-      int end = newIndex - 1;
-      HLTask startTask = tasks[oldIndex];
-      int i = 0;
-      int local = oldIndex;
-      do {
-        tasks[local] = tasks[++local];
-        i++;
-      } while (i < end - oldIndex);
-      tasks[end] = startTask;
-      _onTaskMovedtoSameList(startTask, oldIndex, newIndex);
-    } else if (oldIndex > newIndex) {
-      //dragging from bottom to top
-      HLTask startTask = tasks[oldIndex];
-      for (int i = oldIndex; i > newIndex; i--) {
-        tasks[i] = tasks[i - 1];
+    setState(() {
+      if(newIndex > oldIndex) {
+        newIndex -= 1;
       }
-      tasks[newIndex] = startTask;
-      _onTaskMovedtoSameList(startTask, oldIndex, newIndex);
-    }
-    setState(() {});
+      HLTask task = tasks.removeAt(oldIndex);
+      task.title = tasks[newIndex].title;
+      task.currentIndex = newIndex;
+      task.documentId = tasks[newIndex].documentId;
+      tasks.insert(newIndex, task);
+      _onTaskMovedtoSameList(task, oldIndex, newIndex);
+    });
   }
 
   showMyDialog(BuildContext context, TaskListState state) {

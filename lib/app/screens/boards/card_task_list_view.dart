@@ -63,7 +63,7 @@ class _CardTaskListViewState extends State<CardTaskListView> {
               content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Card added successfully'),
+                    Text('Successful!!!'),
                     Icon(Icons.check_circle),
                   ]),
               backgroundColor: Colors.green,
@@ -77,7 +77,7 @@ class _CardTaskListViewState extends State<CardTaskListView> {
               content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Failed to add new card'),
+                    Text('Failed!!!'),
                     Icon(Icons.error),
                   ]),
               backgroundColor: Colors.red,
